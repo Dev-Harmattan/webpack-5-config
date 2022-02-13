@@ -1,3 +1,4 @@
+import './styles/index.scss';
 const personObject = {
   name: 'jonh',
   age: 34,
