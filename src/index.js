@@ -1,14 +1,5 @@
 import './styles/index.scss';
-const personObject = {
-  name: 'jonh',
-  age: 34,
-  height: '34inch',
-}
+import {render} from 'react-dom';
+import App from './components/App'
 
-const leaderPerson = {
-  ...personObject,
-  position: 'leader'
-}
-
-console.log(personObject);
-console.log(leaderPerson);
+render(<App />, document.getElementById('root'));
