@@ -10,9 +10,19 @@ if(process.env.NODE_ENV !== 'production'){
 module.exports = {
   mode: mode,
   plugins: [ new MiniCssExtractPlugin()],
+  
+  // create image output file for the bull
+  output: {
+    assetModuleFilename: 'image/[hash][ext][query]'
+  },
   module: {
     rules: [
-      // style rules
+      //images rule
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      // style rule
       {
         test: /\.(sa|sc|c)ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', {

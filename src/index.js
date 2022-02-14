@@ -1,4 +1,3 @@
-import './styles/index.scss';
 import {render} from 'react-dom';
 import App from './components/App'
 
